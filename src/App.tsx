@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NotesState } from './store/reducers/notes'
 import {ADD_NOTE, REMOVE_NOTE} from './store/actions/notes';
 import { MovieCard } from './components/movies/MovieCard'
+import {Row, Col, Container} from 'react-bootstrap'
 
 function App() {
   // type of state is Note, return type of useSelector
@@ -22,15 +23,11 @@ function App() {
   }
   return (
     <div>
-      <NewNoteInput addNote={addNote} removeNote={removeNote}/>
-      <hr/>
-      <ul>
-        {/* {notes.map((note) => {
-          return <li key={note}>{note}</li>
-        })} */}
-      </ul>
-      <hr/>
-      <MovieCard></MovieCard>
+      <Container fluid>
+        <Row>
+          <MovieCard/>
+        </Row>
+      </Container>
     </div>
   );
 }

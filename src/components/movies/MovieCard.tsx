@@ -1,7 +1,7 @@
 import React from 'react';
 import {MovieInput} from './MovieInput';
 import {MovieOutput} from './MovieOutput';
-import {Card} from 'react-bootstrap';
+import {Row, Col, Card} from 'react-bootstrap';
 
 
 export const MovieCard:React.FC = () => {

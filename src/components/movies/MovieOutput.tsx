@@ -11,15 +11,15 @@ export const MovieOutput:React.FC = (props) => {
     //     state => state.movies
     // ) //parses state object and gets required field
 
-    const movies = useSelector((state: RootState) => state.movies);
+    const currentMovie = useSelector((state: RootState) => state.movies.currentMovie);
 
     const checkState = () => {
-        console.log(movies)
+        console.log(currentMovie)
     }
 
     return (
             <span>
-                <button onClick={checkState}>Get State</button>
+                { (currentMovie['title'] !== "") && <span>{currentMovie['title']}</span>}
             </span>
     )
 }

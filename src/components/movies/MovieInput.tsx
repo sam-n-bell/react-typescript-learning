@@ -20,10 +20,10 @@ export const MovieInput:React.FC = (props) => {
     return (
         <Container fluid>
             <Row>
-                <Col>
+                <Col md={8}>
                     <input type="number" placeholder="Enter an Id" onChange={changeId}></input>
                 </Col>
-                <Col>
+                <Col md={8}>
                     <button onClick={getMovieById}>Get</button>
                 </Col>
             </Row>
