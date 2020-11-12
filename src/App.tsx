@@ -5,9 +5,10 @@ import { NameEdit } from './components/nameEdit'
 import { NewNoteInput } from './components/NewNoteInput'
 import { useSelector, useDispatch } from 'react-redux';
 import { NotesState } from './store/reducers/notes'
-import {ADD_NOTE, REMOVE_NOTE} from './store/actions/notes';
+import { ADD_NOTE, REMOVE_NOTE } from './store/actions/notes';
 import { MovieCard } from './components/movies/MovieCard'
-import {Row, Col, Container} from 'react-bootstrap'
+import { Navigation } from './components/navigation/Navigation';
+import { Row, Col, Container } from 'react-bootstrap'
 
 function App() {
   // type of state is Note, return type of useSelector
@@ -15,17 +16,20 @@ function App() {
   const dispatch = useDispatch()
 
   const addNote = (note: string) => {
-    dispatch({type: ADD_NOTE, payload: note})
+    dispatch({ type: ADD_NOTE, payload: note })
   }
 
   const removeNote = (note: string) => {
-    dispatch({type: REMOVE_NOTE, payload: note})
+    dispatch({ type: REMOVE_NOTE, payload: note })
   }
   return (
     <div>
+      <Navigation/>
       <Container fluid>
         <Row>
-          <MovieCard/>
+          <Col>
+            <MovieCard />
+          </Col>
         </Row>
       </Container>
     </div>
