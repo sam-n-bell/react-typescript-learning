@@ -22,14 +22,16 @@ function App() {
   const removeNote = (note: string) => {
     dispatch({ type: REMOVE_NOTE, payload: note })
   }
+
+  const numCards = [1,2,3,4]
   return (
     <div>
       <Navigation/>
       <Container fluid>
         <Row>
-          <Col>
-            <MovieCard />
-          </Col>
+          {numCards.map((card) => {
+            return <Col><MovieCard /></Col>
+          })}
         </Row>
       </Container>
     </div>

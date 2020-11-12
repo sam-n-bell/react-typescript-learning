@@ -6,7 +6,7 @@ import {Row, Col, Card} from 'react-bootstrap';
 
 export const MovieCard:React.FC = () => {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ minWidth: '18rem', maxWidth: "100%", marginBottom: "10px" }}>
             <Card.Body>
                  <Card.Title>
                      <MovieInput></MovieInput>
