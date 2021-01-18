@@ -13,10 +13,6 @@ export const MovieOutput:React.FC = (props) => {
 
     const currentMovie = useSelector((state: RootState) => state.movies.currentMovie);
 
-    const checkState = () => {
-        console.log(currentMovie)
-    }
-
     return (
             <span>
                 { (currentMovie['title'] !== "") && <span>{currentMovie['title']}</span>}

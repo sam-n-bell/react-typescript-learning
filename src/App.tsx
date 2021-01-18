@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Name } from './components/name'
-import { NameEdit } from './components/nameEdit'
-import { NewNoteInput } from './components/NewNoteInput'
 import { useSelector, useDispatch } from 'react-redux';
-import { NotesState } from './store/reducers/notes'
+import { NotesState } from './store/reducers/notes';
 import { ADD_NOTE, REMOVE_NOTE } from './store/actions/notes';
-import { MovieCard } from './components/movies/MovieCard'
-import { Navigation } from './components/navigation/Navigation';
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap';
+import { DataTable } from './components/table-test/DataTable';
 
 function App() {
   // type of state is Note, return type of useSelector
@@ -23,17 +19,17 @@ function App() {
     dispatch({ type: REMOVE_NOTE, payload: note })
   }
 
-  const numCards = [1,2,3,4]
+  const numCards = [1, 2, 3, 4]
   return (
     <div>
-      <Navigation/>
-      <Container fluid>
-        <Row>
+      {/* <Grid container spacing={3}> */}
+        {/* <Grid item xs={4}>
           {numCards.map((card) => {
-            return <Col><MovieCard /></Col>
+            // return <MovieCard key={card}/>
+            return <Paper key={card}>xs</Paper>
           })}
-        </Row>
-      </Container>
+        </Grid> */}
+      <DataTable/>
     </div>
   );
 }
