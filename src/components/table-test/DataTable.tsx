@@ -31,6 +31,17 @@ export const DataTable: React.FC = (props) => {
     )
 
 
+    const expandRow = {
+        renderer: (row: { id: any; }) => (
+          <div>
+            <p>{ `This Expand row is belong to rowKey ${row.id}` }</p>
+            <p>You can render anything here, also you can add additional data on every row object</p>
+            <p>expandRow.renderer callback will pass the origin row object to you</p>
+          </div>
+        )
+      };
+
+
 
     return (
         <div>
@@ -46,7 +57,7 @@ export const DataTable: React.FC = (props) => {
           })}
         </Grid> */}
             {/* {tableData.map(d) => } */}
-            <BootstrapTable keyField='id' data={ tableData } columns={ columns } />
+            <BootstrapTable keyField='id' data={ tableData } columns={ columns }  expandRow={ expandRow } bootstrap4/>
         </div>
     )
 }

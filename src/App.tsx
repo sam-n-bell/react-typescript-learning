@@ -5,6 +5,7 @@ import { NotesState } from './store/reducers/notes';
 import { ADD_NOTE, REMOVE_NOTE } from './store/actions/notes';
 import { Row, Col, Container } from 'react-bootstrap';
 import { DataTable } from './components/table-test/DataTable';
+import { TypePlayground } from './components/playground/TypePlayground';
 
 function App() {
   // type of state is Note, return type of useSelector
@@ -29,7 +30,8 @@ function App() {
             return <Paper key={card}>xs</Paper>
           })}
         </Grid> */}
-      <DataTable/>
+      {/* <DataTable/> */}
+      <TypePlayground/>
     </div>
   );
 }
