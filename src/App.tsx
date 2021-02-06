@@ -6,21 +6,22 @@ import { ADD_NOTE, REMOVE_NOTE } from './store/actions/notes';
 import { Row, Col, Container } from 'react-bootstrap';
 import { DataTable } from './components/table-test/DataTable';
 import { TypePlayground } from './components/playground/TypePlayground';
+import {Basic} from './components/testComponents/Basic';
 
 function App() {
   // type of state is Note, return type of useSelector
-  const notesObj = useSelector<NotesState, NotesState["notes"]>((state) => state.notes) //parses state object and gets required field
-  const dispatch = useDispatch()
+  // const notesObj = useSelector<NotesState, NotesState["notes"]>((state) => state.notes) //parses state object and gets required field
+  // const dispatch = useDispatch()
 
-  const addNote = (note: string) => {
-    dispatch({ type: ADD_NOTE, payload: note })
-  }
+  // const addNote = (note: string) => {
+  //   dispatch({ type: ADD_NOTE, payload: note })
+  // }
 
-  const removeNote = (note: string) => {
-    dispatch({ type: REMOVE_NOTE, payload: note })
-  }
+  // const removeNote = (note: string) => {
+  //   dispatch({ type: REMOVE_NOTE, payload: note })
+  // }
 
-  const numCards = [1, 2, 3, 4]
+  // const numCards = [1, 2, 3, 4]
   return (
     <div>
       {/* <Grid container spacing={3}> */}
@@ -31,7 +32,8 @@ function App() {
           })}
         </Grid> */}
       {/* <DataTable/> */}
-      <TypePlayground/>
+      {/* <TypePlayground/> */}
+      <Basic/>
     </div>
   );
 }
